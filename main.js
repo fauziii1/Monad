@@ -10,14 +10,14 @@ const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
 const wallet = new ethers.Wallet(privateKey, provider);
 
 // Define the router contract
-const routerAddress = "0xCa810D095e90Daae6e867c19DF6D9A8C56db2c89";
+const routerAddress = "0x4c4eABd5Fb1D1A7234A48692551eAECFF8194CA7";
 const routerAbi = [
     "function swapExactETHForTokens(uint amountOutMin, address[] calldata path, address to, uint deadline) payable returns (uint[] memory amounts)",
     "function swapExactTokensForETH(uint amountIn, uint amountOutMin, address[] calldata path, address to, uint deadline) returns (uint[] memory amounts)",
     "function getAmountsOut(uint amountIn, address[] calldata path) external view returns (uint[] memory amounts)",
 ];
 
-const usdtAddress = "0xf817257fed379853cDe0fa4F97AB987181B1E5Ea";
+const usdtAddress = "0x0F0BDEbF0F83cD1EE3974779Bcb7315f9808c714";
 const wethAddress = "0x760AfE86e5de5fa0Ee542fc7B7B713e1c5425701";
 const router = new ethers.Contract(routerAddress, routerAbi, wallet);
 
